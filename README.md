@@ -1,4 +1,4 @@
-# parcial-3-admn3c-lopez_matias
+# parcial-2-admn3c-lopez_matias
 
 ## Project setup
 ```

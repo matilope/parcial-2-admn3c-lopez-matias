@@ -1,28 +1,56 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+  <v-app>
+    <NavComponent />
+    <BannerComponent />
+    <v-main class="my-8">
+      <router-view />
+    </v-main>
+    <FooterComponent />
+  </v-app>
 </template>
 
+<style lang="scss">
+  h2 {
+    font-size: 2rem;
+  }
+
+  ul {
+    list-style: none;
+    padding-left: 0;
+  }
+
+  .img-fluid {
+    width: 100%;
+    height: auto;
+  }
+
+  @media (min-width: 1904px) {
+    .container {
+        max-width: 1400px !important;
+    }
+  }
+
+  .v-btn--disabled {
+    opacity: 0.5 !important;
+    color: white !important;
+  }
+</style>
+
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+// @ is an alias to /src
+import NavComponent from '@/components/NavComponent.vue'
+import BannerComponent from '@/components/BannerComponent.vue'
+import FooterComponent from '@/components/FooterComponent.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
-  }
+    NavComponent,
+    BannerComponent,
+    FooterComponent
+  },
+  data: () => ({
+    //
+  })
 }
 </script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>

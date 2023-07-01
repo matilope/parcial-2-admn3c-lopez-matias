@@ -316,11 +316,19 @@
     .price-total {
       font-size: 1.5rem;
       color: #1a156b;
+
+      @media (max-width: 420px) {
+        font-size: 1.25rem;
+      }
     }
 
     p {
       font-size: 1.25rem;
       margin: 1rem 0;
+
+      @media (max-width: 420px) {
+        font-size: 1rem;
+      }
     }
 
     form {

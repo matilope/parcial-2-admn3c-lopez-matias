@@ -34,8 +34,8 @@
       font-size: 2.5rem !important;
     }
 
-    @media screen and (max-width: 320px) {
-      font-size: 2.5rem !important;
+    @media screen and (max-width: 340px) {
+      font-size: 2rem !important;
     }
   }
 }

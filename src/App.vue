@@ -12,6 +12,10 @@
 <style lang="scss">
   h2 {
     font-size: 2rem;
+
+    @media (max-width:420px) {
+      font-size: 1.5rem;
+    }
   }
 
   ul {

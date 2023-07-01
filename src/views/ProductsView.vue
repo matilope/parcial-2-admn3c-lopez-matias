@@ -15,7 +15,7 @@
 
 <script>
 import ProductsComponent from '@/components/ProductsComponent.vue'
-import API from '../api.js'
+import { API } from '../api.js'
 
 export default {
   name: 'ProductView',

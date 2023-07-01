@@ -135,7 +135,11 @@ export default {
       if (localStorage.getItem('token')) {
         localStorage.removeItem('token')
       }
-      this.$router.push('/productos')
+      this.$router.push('/productos').catch((err) => {
+        if (err) {
+          window.location.reload()
+        }
+      })
     }
   }
 }

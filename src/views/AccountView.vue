@@ -115,7 +115,7 @@
 
 <script>
 import Swal from 'sweetalert2'
-import API from '../api.js'
+import { API } from '../api.js'
 
 export default {
   name: 'AccountView',

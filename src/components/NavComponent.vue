@@ -60,7 +60,7 @@ a {
 }
 
 .v-navigation-drawer {
-  height: 100vh !important;
+  height: 100svh !important;
 
   .log-container {
     text-align: center;

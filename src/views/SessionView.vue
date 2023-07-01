@@ -53,6 +53,8 @@
 </style>
 
 <script>
+import API from '../api.js'
+
 export default {
   name: 'SessionView',
   components: {},
@@ -84,7 +86,7 @@ export default {
       this.$refs.form.validate()
     },
     async logIn () {
-      const url = 'http://localhost:3001/api/user/login'
+      const url = `${API}/user/login`
       const data = {
         email: this.email,
         password: this.password

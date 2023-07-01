@@ -86,11 +86,13 @@
 </style>
 
 <script>
+import API from '../api.js'
+
 export default {
   name: 'EditProductView',
   components: {},
   async created () {
-    const data = await (await fetch(`http://localhost:3001/api/product/${this.$route.params.id}`)).json()
+    const data = await (await fetch(`${API}/product/${this.$route.params.id}`)).json()
     this.productUnique = data.product
     this.titulo = this.productUnique.titulo
     this.descripcion = this.productUnique.descripcion
@@ -124,7 +126,7 @@ export default {
     },
     async editar () {
       this.isNotLoaded = true
-      const url = `http://localhost:3001/api/product/${this.$route.params.id}`
+      const url = `${API}/product/${this.$route.params.id}`
       const formData = new FormData()
       formData.append('titulo', this.titulo)
       formData.append('descripcion', this.descripcion)

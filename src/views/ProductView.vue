@@ -147,6 +147,7 @@
 </style>
 
 <script>
+import API from '../api.js'
 
 export default {
   name: 'ProductView',
@@ -160,7 +161,7 @@ export default {
     }
   },
   async created () {
-    const data = await (await fetch(`http://localhost:3001/api/product/${this.$route.params.id}`)).json()
+    const data = await (await fetch(`${API}/product/${this.$route.params.id}`)).json()
     this.productUnique = data.product
   },
   data: () => ({

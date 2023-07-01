@@ -115,12 +115,13 @@
 
 <script>
 import Swal from 'sweetalert2'
+import API from '../api.js'
 
 export default {
   name: 'AccountView',
   components: {},
   async created () {
-    const data = await (await fetch('http://localhost:3001/api/products')).json()
+    const data = await (await fetch(`${API}/products`)).json()
     this.products = data.products
   },
   filters: {
@@ -152,7 +153,7 @@ export default {
       }).then(async (result) => {
         if (result.isConfirmed) {
           this.id = id
-          const url = `http://localhost:3001/api/product/${id}`
+          const url = `${API}/product/${id}`
           try {
             const response = await fetch(url, {
               method: 'DELETE'

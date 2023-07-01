@@ -78,6 +78,8 @@
 </style>
 
 <script>
+import API from '../api.js'
+
 export default {
   name: 'CreateProductView',
   components: {},
@@ -102,7 +104,7 @@ export default {
     },
     async guardar () {
       this.isNotLoaded = true
-      const url = 'http://localhost:3001/api/product'
+      const url = `${API}/product`
       const formData = new FormData()
       formData.append('titulo', this.titulo)
       formData.append('descripcion', this.descripcion)

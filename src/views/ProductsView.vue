@@ -15,6 +15,7 @@
 
 <script>
 import ProductsComponent from '@/components/ProductsComponent.vue'
+import API from '../api.js'
 
 export default {
   name: 'ProductView',
@@ -22,7 +23,7 @@ export default {
     ProductsComponent
   },
   async created () {
-    const data = await (await fetch('http://localhost:3001/api/products')).json()
+    const data = await (await fetch(`${API}/products`)).json()
     this.products = data.products
   },
   data: () => ({

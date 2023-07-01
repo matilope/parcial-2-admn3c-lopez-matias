@@ -45,6 +45,10 @@ const routes = [
     name: 'Editar producto',
     component: () => import('../views/EditProductView.vue'),
     meta: { requiresAuth: true }
+  },
+  {
+    path: '*',
+    redirect: '/'
   }
 ]
 
@@ -54,7 +58,7 @@ const router = new VueRouter({
 
 router.beforeEach((to, from, next) => {
   if (to.meta.requiresAuth) {
-    if (localStorage.getItem('token')) {
+    if (localStorage.getItem('token') === 'Autenticado') {
       next()
     } else {
       next('/inicio-sesion')
